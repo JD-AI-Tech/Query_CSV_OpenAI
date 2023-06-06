@@ -46,7 +46,7 @@ with st.sidebar:
         - [Python](https://www.python.org/)
         - [Anaconda](https://www.anaconda.com/)   
         - [Pycharm IDE](https://www.jetbrains.com/pycharm/) 
-        - [Kaggle Models](https://www.kaggle.com/models)  
+        - [Kaggle CSV datasets](https://www.kaggle.com/datasets?fileType=csv)    
     ''')
 # UI
 uploaded_file = st.file_uploader('', type=['csv'])
