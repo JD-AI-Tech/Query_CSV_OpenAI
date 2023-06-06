@@ -17,7 +17,16 @@ log_directory = 'log'
 create_directory(log_directory)
 
 # setup UI
-st.header("Query CSV file by 'asking' questions using natural language powered by OpenAI GPT-3.5")
+st.header("Query CSV file using natural language powered by OpenAI GPT-3.5 or Davinci")
+genre = st.radio(
+    "Select the [language model](https://getgenie.ai/davinci-vs-turbo/)  that you want to use.",
+    ('gpt-3.5-turbo','text-davinci-003'))
+
+model_name = 'gpt-3.5-turbo'
+if genre == 'gpt-3.5-turbo':
+    model_name = 'gpt-3.5-turbo'
+else:
+    model_name = 'text-davinci-003'
 
 with st.sidebar:
     st.title('About')
@@ -59,7 +68,7 @@ if uploaded_file is not None:
     csv_expander.write(df.head(number_of_records_to_display))
 
     # Create a question-answering chain using # text-davinci-003 #gpt-3.5-turbo
-    llm = OpenAI(temperature=0, model_name="text-davinci-003")
+    llm = OpenAI(temperature=0, model_name=model_name)
     memory = ConversationBufferMemory(input_key=user_input, memory_key='chat_history')
     agent = create_csv_agent(llm,
                              saved_file_name,
@@ -70,5 +79,5 @@ if uploaded_file is not None:
         response = agent.run(user_input)
         st.write(response)
 
-       #  with st.expander('History'):
-       #   st.info(memory.buffer)
+        # with st.expander('History'):
+        #     st.info(memory.buffer)
