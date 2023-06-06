@@ -45,7 +45,8 @@ with st.sidebar:
         - [LangChain](https://python.langchain.com/en/latest/index.html)
         - [Python](https://www.python.org/)
         - [Anaconda](https://www.anaconda.com/)   
-        - [Pycharm IDE](https://www.jetbrains.com/pycharm/)   
+        - [Pycharm IDE](https://www.jetbrains.com/pycharm/) 
+        - [Kaggle Models](https://www.kaggle.com/models)  
     ''')
 # UI
 uploaded_file = st.file_uploader('', type=['csv'])
