@@ -70,5 +70,5 @@ if uploaded_file is not None:
         response = agent.run(user_input)
         st.write(response)
 
-        with st.expander('History'):
-            st.info(memory.buffer)
+       #  with st.expander('History'):
+       #   st.info(memory.buffer)
