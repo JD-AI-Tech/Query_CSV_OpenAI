@@ -17,7 +17,7 @@ log_directory = 'log'
 create_directory(log_directory)
 
 # setup UI
-st.header("Query CSV file using natural language powered by OpenAI GPT-3.5 or Davinci")
+st.header("Query CSV file using natural language powered by OpenAI GPT-3.5-turbo or Davinci Large Language Models, LLM(s)")
 genre = st.radio(
     "Select the [language model](https://getgenie.ai/davinci-vs-turbo/)  that you want to use.",
     ('gpt-3.5-turbo','text-davinci-003'))
