@@ -32,9 +32,9 @@ with st.sidebar:
     st.title('About')
     st.markdown('''
         This is a Proof Of Concept (POC). 
-        The goal is to query a CSV file using natural language.
-        - OpanAI's GPT API queries CVS file
-        - LangChain connects to CVS file
+        The goal is to query a Comma Seperated Values (CSV) file using natural language.
+        - OpanAI's GPT API queries CSV file
+        - LangChain connects to CSVfile
  
      ''')
     st.title('Technology')
